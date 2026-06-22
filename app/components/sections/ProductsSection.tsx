@@ -2,75 +2,80 @@
 
 import Link from 'next/link';
 import { PRODUCTS } from '@/constants';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
 
 export function ProductsSection() {
   return (
-    <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative py-24 md:py-36 bg-[#080d1a] overflow-hidden">
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 text-blue-900 rounded-full text-sm font-semibold mb-6">
-            <span className="w-2 h-2 bg-cyan-500 rounded-full"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-cyan text-cyan-300 text-xs font-semibold tracking-widest uppercase mb-6">
             Product Suite
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive Solutions
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+            Six products,<span className="gradient-text"> one platform</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-            Complete AI-powered tools for infrastructure automation, operations, and analytics
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            From infrastructure to analytics — every tool your enterprise needs.
           </p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Products grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {PRODUCTS.map((product, idx) => (
-            <Card key={product.id} hover interactive className="relative overflow-hidden group flex flex-col">
-              {/* Top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-
-              {/* Icon/Badge */}
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-900 to-cyan-400 rounded-xl mb-4 flex items-center justify-center text-white text-xl font-bold">
-                {idx + 1}
+            <div key={product.id} className="card-dark rounded-2xl p-7 flex flex-col group relative overflow-hidden">
+              {/* Number badge */}
+              <div className="absolute top-6 right-6 w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+                <span className="text-xs font-black text-cyan-400">{idx + 1}</span>
               </div>
 
-              {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h3>
-              <p className="text-gray-600 mb-6 flex-grow">{product.description}</p>
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/20 flex items-center justify-center mb-5 group-hover:from-cyan-500/30 group-hover:to-blue-600/30 transition-all duration-300">
+                <span className="text-2xl">
+                  {['🚀','🤖','📊','🔭','🔐','📈'][idx]}
+                </span>
+              </div>
 
-              {/* Features */}
-              <ul className="space-y-2 mb-8">
-                {product.features.slice(0, 3).map((feature, fidx) => (
-                  <li key={fidx} className="flex items-start text-sm text-gray-700">
-                    <span className="text-cyan-500 mr-2 font-bold">✓</span>
-                    <span>{feature}</span>
+              <h3 className="text-xl font-bold text-white mb-2 pr-10">{product.name}</h3>
+              <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-grow">{product.description}</p>
+
+              <ul className="space-y-2 mb-6">
+                {product.features.slice(0, 3).map((f, fi) => (
+                  <li key={fi} className="flex items-center gap-2 text-xs text-slate-400">
+                    <span className="text-cyan-400 font-bold shrink-0">✓</span>
+                    {f}
                   </li>
                 ))}
               </ul>
 
-              {/* Button */}
-              <Link href={`/products?id=${product.id}`} className="mt-auto">
-                <Button variant="outline" size="md" className="w-full text-blue-900 border-blue-200 hover:border-blue-900">
-                  Learn More
-                </Button>
+              <Link
+                href={`/products`}
+                className="inline-flex items-center gap-1.5 text-sm text-cyan-400 font-semibold hover:text-cyan-300 transition-colors group/link"
+              >
+                Learn more
+                <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </Link>
-            </Card>
+
+              {/* hover glow */}
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/3 rounded-full blur-3xl group-hover:bg-cyan-500/8 transition-colors duration-700" />
+            </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center">
-          <Link href="/products">
-            <Button size="lg" variant="gradient">
-              View All Products
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Button>
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-[#0a0f1e] gradient-btn shadow-[0_0_40px_rgba(0,212,255,0.2)] transition-smooth"
+          >
+            View All Products
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
         </div>
       </div>

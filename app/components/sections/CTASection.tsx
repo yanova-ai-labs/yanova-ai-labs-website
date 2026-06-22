@@ -1,58 +1,63 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
-import { COMPANY } from '@/constants';
 
 export function CTASection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900">
-        {/* Animated blobs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-blue-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    <section className="relative py-24 md:py-32 bg-[#0a0f1e] overflow-hidden">
+      {/* Radial glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-cyan-500/6 rounded-full blur-[100px]" />
       </div>
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 text-white rounded-full text-sm font-semibold mb-6 backdrop-blur-md border border-white/20">
-          <span className="w-2 h-2 bg-cyan-300 rounded-full"></span>
-          Ready to Transform?
-        </div>
+      {/* Main card */}
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl overflow-hidden relative">
+          {/* Gradient border */}
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-500/30 via-blue-600/20 to-violet-600/30 p-[1px]">
+            <div className="absolute inset-[1px] rounded-3xl bg-[#0d1424]" />
+          </div>
 
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Ready to Transform <br className="hidden md:inline" />
-          Your Operations?
-        </h2>
+          <div className="relative p-12 md:p-16 text-center">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-cyan text-cyan-300 text-xs font-semibold tracking-widest uppercase mb-8">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+              Start Today — Free
+            </div>
 
-        {/* Description */}
-        <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-          Join enterprise teams using {COMPANY.name} to automate infrastructure, reduce manual effort, and gain real-time visibility.
-        </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+              Ready to automate
+              <br />
+              <span className="gradient-text">your operations?</span>
+            </h2>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact">
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 font-semibold">
-              Get Started Free
-            </Button>
-          </Link>
-          <Link href="/products">
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900 font-semibold">
-              Explore Platform
-            </Button>
-          </Link>
-        </div>
+            <p className="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+              Join enterprises using Yanova AI Labs to eliminate manual work, 
+              reduce MTTR, and gain real-time intelligence across their infrastructure.
+            </p>
 
-        {/* Trust indicators */}
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <p className="text-blue-100 text-sm mb-4 font-medium">Trusted by Leading Enterprises</p>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-8 w-24 bg-white/10 rounded-lg backdrop-blur-md animate-pulse"></div>
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-[#0a0f1e] gradient-btn shadow-[0_0_50px_rgba(0,212,255,0.3)] transition-smooth text-base"
+              >
+                Get Started Free
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white glass border border-white/10 hover:border-cyan-400/40 hover:bg-white/5 transition-smooth text-base"
+              >
+                Explore Platform
+              </Link>
+            </div>
+
+            {/* Trust line */}
+            <p className="mt-8 text-xs text-slate-600">
+              No credit card required · Enterprise-grade security · SOC 2 ready
+            </p>
           </div>
         </div>
       </div>
