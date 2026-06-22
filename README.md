@@ -1,213 +1,187 @@
-# Yanova AI Labs - Website
+# Yanova AI Labs — Official Website
 
-Enterprise AI startup website for Yanova AI Labs. Built with Next.js 14, TypeScript, Tailwind CSS, and modern React patterns.
+> **Intelligence for Every Business**  
+> *Observe. Analyze. Automate.*
 
-## Overview
+The official website for **Yanova AI Labs** — an enterprise AI platform for infrastructure automation, AI operations, observability, analytics, and compliance.
 
-This is the official website for Yanova AI Labs - an enterprise platform providing AI-powered infrastructure automation, operations management, and analytics solutions.
+🌐 **Live Site:** [yanovalabs.com](https://yanovalabs.com)  
+📦 **Repository:** [github.com/yanova-ai-labs/yanova-ai-labs-website](https://github.com/yanova-ai-labs/yanova-ai-labs-website)  
+🚀 **Deployed on:** [Vercel](https://vercel.com/yanova-ai-labs/yanova-ai-labs-website)
 
-**Brand**: Intelligence for Every Business  
-**Slogan**: Observe. Analyze. Automate.
+---
+
+## About
+
+Founded by **Venkat Yanapothula** (12+ years in DevOps, Cloud, and Automation), Yanova AI Labs builds AI-powered enterprise tools that eliminate manual infrastructure work, reduce MTTR, and deliver real-time business intelligence.
+
+---
 
 ## Tech Stack
 
-- **Frontend**: React 19 + TypeScript
-- **Framework**: Next.js 16 (App Router)
-- **Styling**: Tailwind CSS 4
-- **Code Quality**: ESLint, Prettier
-- **Deployment**: Vercel
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS 4 |
+| Runtime | React 19 |
+| Deployment | Vercel |
+| Domain | GoDaddy → yanovalabs.com |
+| Version Control | GitHub |
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — Hero, About, Products, OneClick, Solutions, AI Platform, Tech Stack, Trust, CTA |
+| `/products` | Full product catalog with feature breakdowns |
+| `/solutions` | Enterprise solutions by industry |
+| `/about` | Company story, founder background, values |
+| `/contact` | Contact form and company info |
+
+---
+
+## Home Page Sections
+
+1. **Hero** — Animated terminal, floating cards, "Intelligence for Every Business"
+2. **About** — Company intro, 4 stats (12+ yrs, AI First, Enterprise, Global)
+3. **Products** — All 6 products in colored icon cards
+4. **OneClick** — Step visualization + EKS cluster architecture diagram
+5. **Solutions** — 6 industry cards (Fintech, Healthcare, E-commerce, Manufacturing, SaaS)
+6. **AI Platform** — AI capabilities showcase with animated core
+7. **Tech Stack** — 13 technology badges with color indicators
+8. **Trust & Benefits** — SOC 2, ISO 27001, GDPR, HIPAA + customer impact stats
+9. **CTA** — "Ready to Transform Your Business?" with gradient border card
+
+---
+
+## Product Suite
+
+| Product | Description |
+|---|---|
+| **Yanova OneClick** | One-click Kubernetes/EKS cluster deployment |
+| **Yanova AI Ops** | Natural language ops, root cause analysis, automated remediation |
+| **Yanova Observability** | Unified logs, metrics, traces, AI anomaly detection |
+| **Yanova Insights** | Real-time executive dashboards and revenue analytics |
+| **Yanova Compliance** | CIS benchmarks, security audits, compliance reports |
+| **Yanova MarketIQ** | AI-powered stock analysis, portfolio tracking |
+
+---
 
 ## Project Structure
 
 ```
-yanova-ai-labs/
-├── app/
-│   ├── components/
-│   │   ├── layout/          # Header, Footer components
-│   │   ├── sections/        # Page sections (Hero, Features, Products, CTA)
-│   │   ├── ui/              # Reusable UI components (Button, Card)
-│   │   └── common/          # Common components
-│   ├── constants/           # App constants and data
-│   ├── types/               # TypeScript type definitions
-│   ├── utils/               # Utility functions
-│   ├── hooks/               # Custom React hooks
-│   ├── (pages)/             # Route groups (future expansion)
-│   ├── products/            # Products page
-│   ├── solutions/           # Solutions page
-│   ├── about/               # About page
-│   ├── contact/             # Contact page
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Home page
-│   └── globals.css          # Global styles
-├── public/                  # Static assets
-├── .github/                 # GitHub configuration
-├── .vscode/                 # VS Code settings and tasks
-└── package.json
+app/
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx         # Sticky nav, mobile menu
+│   │   └── Footer.tsx         # Full footer with product/company links
+│   └── sections/
+│       ├── HeroSection.tsx
+│       ├── AboutSection.tsx
+│       ├── ProductsSection.tsx
+│       ├── OneClickSection.tsx
+│       ├── SolutionsSection.tsx
+│       ├── AIPlatformSection.tsx
+│       ├── TechStackSection.tsx
+│       ├── TrustSection.tsx
+│       └── CTASection.tsx
+├── constants/index.ts          # Products, solutions, contact data
+├── types/index.ts              # TypeScript types
+├── (pages)/
+│   ├── products/page.tsx
+│   ├── solutions/page.tsx
+│   ├── about/page.tsx
+│   └── contact/page.tsx
+├── robots.ts                   # SEO robots.txt
+├── sitemap.ts                  # XML sitemap
+├── globals.css                 # Design system, animations, utility classes
+├── layout.tsx                  # Root layout with metadata
+└── page.tsx                    # Home page
 ```
 
-## Pages
+---
 
-- **Home** (`/`) - Hero, features, product showcase, CTA
-- **Products** (`/products`) - Complete product suite
-- **Solutions** (`/solutions`) - Industry solutions and use cases
-- **About** (`/about`) - Company story and founder info
-- **Contact** (`/contact`) - Contact form and information
+## Design System
 
-## Brand Colors
+**Theme:** Dark premium enterprise (inspired by Datadog, OpenAI, Stripe)
 
-- **Deep Navy Blue**: #0F172A
-- **Electric Cyan**: #00D9FF
-- **White**: #FFFFFF
-- **Silver Gray**: #94A3B8
+| Token | Value |
+|---|---|
+| Background | `#060b14` |
+| Surface | `#080d1a` |
+| Cyan (primary) | `#00d4ff` |
+| Purple (accent) | `#7c3aed` |
+| Text primary | `#f1f5f9` |
+| Text muted | `#94a3b8` |
 
-## Getting Started
+**CSS Utilities:** `.card`, `.btn-primary`, `.btn-outline`, `.glass`, `.glass-cyan`, `.badge`, `.gradient-text`, `.gradient-text-static`, `.bg-grid`, `.bg-dots`
+
+**Animations:** `fadeUp`, `float`, `blob`, `gradientShift`, `glow-pulse`, `scanLine`, `spin`
+
+---
+
+## Development
 
 ### Prerequisites
+- Node.js 22+ and npm
 
-- Node.js 20+ and npm
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yanovalabs/website.git
-   cd yanova-ai-labs
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Development
-
-Start the development server:
+### Setup
 
 ```bash
-npm run dev
+git clone https://github.com/yanova-ai-labs/yanova-ai-labs-website.git
+cd yanova-ai-labs-website
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the result.
-
-The site hot-reloads as you make changes to files.
-
-### Build
-
-Create an optimized production build:
+### Commands
 
 ```bash
-npm run build
+npm run dev      # Start development server → http://localhost:3000
+npm run build    # Build for production
+npm start        # Start production server
+npm run lint     # Run ESLint
 ```
 
-### Start Production Server
-
-Start the production server:
-
-```bash
-npm start
-```
-
-### Linting
-
-Run ESLint to check code quality:
-
-```bash
-npm run lint
-```
-
-## Key Features
-
-✅ **Responsive Design** - Mobile-first design for all devices  
-✅ **TypeScript** - Full type safety across the codebase  
-✅ **Component Architecture** - Reusable, well-organized components  
-✅ **Tailwind CSS** - Utility-first styling with brand colors  
-✅ **SEO Optimized** - Meta tags, structured data, and best practices  
-✅ **Performance** - Code splitting, lazy loading, optimized images  
-✅ **Accessibility** - WCAG compliant components  
-
-## Development Guidelines
-
-### Code Quality Standards
-
-- Maintain TypeScript strict mode
-- Write functional components with hooks
-- Keep components small and focused
-- Use meaningful names for variables and functions
-- Add proper error handling
-
-### Component Best Practices
-
-- Use compound component pattern for complex UI
-- Extract reusable logic into custom hooks
-- Prop drilling: max 2 levels, use context for deeper props
-- Memoize expensive computations
-
-### Styling
-
-- Use Tailwind CSS utility classes
-- Follow mobile-first responsive design
-- Reference brand colors from constants
-- Dark mode support where applicable
-
-### Commit Guidelines
-
-- Always validate builds before committing
-- Use clear, descriptive commit messages
-- Test responsive design across devices
-- Ensure no console errors or warnings
+---
 
 ## Deployment
 
-### Vercel (Recommended)
+The project auto-deploys to **Vercel** on every push to `main`.
 
-1. Push your code to GitHub
-2. Import project in Vercel dashboard
-3. Configure environment variables if needed
-4. Deploy
+### DNS Configuration (GoDaddy)
 
-### Manual Deployment
+| Record | Type | Value |
+|---|---|---|
+| `@` | A | `76.76.21.21` (Vercel) |
+| `www` | CNAME | `cname.vercel-dns.com` |
 
-```bash
-npm run build
-npm start
-```
+### Environment Variables
+None required for the current static site. Add to `.env.local` as features expand.
 
-## Environment Variables
+---
 
-Currently no environment variables required. Add them as needed to `.env.local`.
+## SEO
 
-## Contributing
+- `metadataBase` set to `https://yanovalabs.com`
+- Canonical URLs on all pages
+- OpenGraph + Twitter Card metadata
+- Auto-generated `/sitemap.xml` and `/robots.txt`
 
-1. Create a feature branch: `git checkout -b feature/new-feature`
-2. Make changes and test locally
-3. Build and ensure no errors: `npm run build`
-4. Run linter: `npm run lint`
-5. Commit: `git commit -am 'Add new feature'`
-6. Push: `git push origin feature/new-feature`
-7. Create a Pull Request
+---
 
-## Performance Optimization
+## Founder
 
-- Next.js automatic code splitting
-- Image optimization with `next/image`
-- Font optimization with `next/font`
-- CSS minification with Tailwind
-- Tree shaking and dead code elimination
+**Venkat Yanapothula**  
+Founder & CEO, Yanova Labs Pvt. Ltd.  
+12+ years in Linux, AWS, Kubernetes, Terraform, DevOps, Cloud Infrastructure, Platform Engineering, and Release Engineering.
 
-## Resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [React Documentation](https://react.dev)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+---
 
 ## License
 
-Proprietary - © 2026 Yanova Labs Pvt. Ltd.
+Proprietary — © 2026 Yanova Labs Pvt. Ltd. All rights reserved.
 
-## Support
-
-For issues and questions:
-- Email: hello@yanovalabs.com
-- GitHub Issues: [Create an issue](https://github.com/yanovalabs/website/issues)
-
+**Contact:** [hello@yanovalabs.com](mailto:hello@yanovalabs.com)
