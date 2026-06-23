@@ -11,7 +11,10 @@ export default function CorporateProfilePage() {
             {COMPANY.name} is an AI-powered enterprise product company focused on automation, observability, cloud operations,
             analytics, and intelligent decision-making.
           </p>
-          <p className="text-slate-400 mt-5 max-w-4xl">Founded by {COMPANY.founder}. {COMPANY.founderBackground}</p>
+          <p className="text-slate-400 mt-5 max-w-4xl">
+            Led by founder {COMPANY.founder}, Yanova AI Labs builds practical AI products for automation,
+            observability, analytics, and business intelligence.
+          </p>
         </div>
       </section>
     </div>

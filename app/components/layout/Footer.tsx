@@ -11,7 +11,7 @@ export function Footer() {
             <Logo className="mb-4" />
             <p className="text-slate-300 text-sm">{COMPANY.tagline}</p>
             <p className="text-cyan-300/80 text-xs tracking-[0.2em] uppercase mt-1">{COMPANY.slogan}</p>
-            <p className="text-slate-400 text-sm mt-4">Talk to Us: +91 XXXXX XXXXX</p>
+            <p className="text-slate-400 text-sm mt-4">Talk to Us: +1 3802849218</p>
             <p className="text-slate-500 text-xs mt-2">Ratings & Reviews: Coming soon</p>
           </div>
 

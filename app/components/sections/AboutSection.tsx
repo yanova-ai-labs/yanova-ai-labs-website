@@ -16,9 +16,8 @@ export function AboutSection() {
             <div className="badge mb-5">Awarded Vision for AI-Powered Automation</div>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-5">Corporate Profile</h2>
             <p className="text-slate-300 text-lg leading-relaxed">
-              {COMPANY.name} is an AI-powered enterprise product company focused on automation, observability, cloud operations,
-              analytics, and intelligent decision-making. Founded by {COMPANY.founder}, a 12+ year IT veteran in DevOps,
-              cloud, and automation.
+              Led by founder {COMPANY.founder}, Yanova AI Labs builds practical AI products for automation,
+              observability, analytics, and business intelligence.
             </p>
           </div>
 
