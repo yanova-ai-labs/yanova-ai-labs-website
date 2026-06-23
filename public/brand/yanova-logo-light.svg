@@ -1,0 +1,16 @@
+<svg width="740" height="180" viewBox="0 0 740 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="yanovaWing" x1="16" y1="14" x2="146" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00BCE5"/>
+      <stop offset="0.58" stop-color="#2D7FEF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="740" height="180" rx="14" fill="#F8FCFF"/>
+  <path d="M28 30L74 52L84 84L46 136L28 30Z" fill="url(#yanovaWing)"/>
+  <path d="M142 30L96 52L84 84L122 136L142 30Z" fill="url(#yanovaWing)"/>
+  <path d="M74 52H96L84 84L74 52Z" fill="#FFFFFF"/>
+  <path d="M84 84L101 136H67L84 84Z" fill="#CBE9FF"/>
+  <text x="170" y="80" fill="#0B1F3A" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="3">YANOVA</text>
+  <text x="170" y="130" fill="#203E66" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="42" font-weight="500" letter-spacing="9">AI LABS</text>
+</svg>

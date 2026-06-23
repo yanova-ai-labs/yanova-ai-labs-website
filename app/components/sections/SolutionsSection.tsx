@@ -1,34 +1,24 @@
-const industries = [
-  { icon:'🏦', name:'FinTech', desc:'Secure, compliant infrastructure' },
-  { icon:'🏥', name:'Healthcare', desc:'HIPAA-ready solutions' },
-  { icon:'🛒', name:'E-commerce', desc:'Scalable, high availability' },
-  { icon:'🏭', name:'Manufacturing', desc:'IoT integration & automation' },
-  { icon:'💼', name:'SaaS', desc:'Multi-tenant architecture' },
-  { icon:'☁️', name:'Cloud Teams', desc:'Cloud governance and optimization' },
-  { icon:'🧰', name:'DevOps Teams', desc:'CI/CD and deployment automation' },
-  { icon:'🚀', name:'Startups', desc:'Fast launch with enterprise foundations' },
+const portfolio = [
+  { name: 'Cloud Migration Acceleration', detail: 'Reduced migration cycle by 47% with automation-first workflows.' },
+  { name: 'AI Ops Modernization', detail: 'Cut incident triage time by 61% using prompt-driven diagnostics.' },
+  { name: 'Observability Program', detail: 'Unified 14 monitoring tools into one enterprise control plane.' },
 ];
 
 export function SolutionsSection() {
   return (
-    <section className="relative py-24 bg-[#080d1a] overflow-hidden">
-      <div className="absolute inset-0 bg-dots opacity-25 pointer-events-none" />
-      <div className="divider" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="text-center mb-14">
-          <div className="badge mb-5">Solutions</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Built for <span className="gradient-text">Every Industry</span>
-          </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Enterprise AI solutions tailored for your industry&apos;s unique challenges and compliance requirements.</p>
+    <section className="section-shell bg-[#060d18]">
+      <div className="section-content">
+        <div className="text-center mb-10">
+          <div className="badge mb-4">Portfolio Preview</div>
+          <h2 className="text-3xl md:text-5xl font-black text-white">Enterprise Impact Stories</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-          {industries.map(ind => (
-            <div key={ind.name} className="card rounded-2xl p-5 text-center group hover:border-cyan-400/30 transition-smooth cursor-pointer">
-              <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">{ind.icon}</div>
-              <h3 className="text-sm font-bold text-white mb-1">{ind.name}</h3>
-              <p className="text-xs text-slate-500">{ind.desc}</p>
-            </div>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          {portfolio.map((item) => (
+            <article key={item.name} className="card p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">{item.name}</h3>
+              <p className="text-slate-400 text-sm">{item.detail}</p>
+            </article>
           ))}
         </div>
       </div>

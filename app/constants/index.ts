@@ -11,6 +11,12 @@ export const COMPANY = {
     '12+ years in IT, Linux, VMware, AWS, Terraform, DevOps, automation, cloud infrastructure, platform engineering, and release engineering.',
 };
 
+export const TOP_BAR = {
+  sales: '+1 3802849218',
+  support: '+91 3802849218',
+  email: 'hello@yanovalabs.com',
+};
+
 export const PRODUCTS: Product[] = [
   {
     id: 'oneclick',
@@ -122,9 +128,27 @@ export const SOLUTIONS: Solution[] = [
   },
 ];
 
+export const SERVICES = [
+  {
+    id: 'platform-engineering',
+    title: 'Platform Engineering',
+    description: 'Create internal developer platforms with secure golden paths and policy controls.',
+  },
+  {
+    id: 'devops-automation',
+    title: 'DevOps Automation',
+    description: 'Build delivery pipelines with AI-assisted release intelligence and rollback automation.',
+  },
+  {
+    id: 'cloud-operations',
+    title: 'Cloud Operations',
+    description: 'Improve reliability, reduce waste, and standardize operations across cloud environments.',
+  },
+];
+
 export const CONTACT: ContactData = {
   email: 'hello@yanovalabs.com',
-  phone: '+1 (XXX) XXX-XXXX',
+  phone: '+91 3802849218',
   address: 'Bangalore, India',
   social: {
     linkedin: 'https://linkedin.com/company/yanova-ai-labs',
@@ -135,9 +159,17 @@ export const CONTACT: ContactData = {
 
 export const NAVIGATION_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Corporate Profile', href: '/corporate-profile' },
+  { label: 'Our Products', href: '/our-products' },
+  { label: 'Our Services', href: '/our-services' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Contact Us', href: '/contact-us' },
+];
+
+export const POLICY_LINKS = [
+  { label: 'Terms & Conditions', href: '#' },
+  { label: 'Privacy Policy', href: '#' },
+  { label: 'Refund Policy', href: '#' },
+  { label: 'Cookies Policy', href: '#' },
 ];
