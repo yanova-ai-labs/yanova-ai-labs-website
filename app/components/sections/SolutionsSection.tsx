@@ -1,10 +1,12 @@
 const industries = [
-  { icon:'🏦', name:'Fintech', desc:'Secure, compliant infrastructure' },
+  { icon:'🏦', name:'FinTech', desc:'Secure, compliant infrastructure' },
   { icon:'🏥', name:'Healthcare', desc:'HIPAA-ready solutions' },
   { icon:'🛒', name:'E-commerce', desc:'Scalable, high availability' },
   { icon:'🏭', name:'Manufacturing', desc:'IoT integration & automation' },
   { icon:'💼', name:'SaaS', desc:'Multi-tenant architecture' },
-  { icon:'⭐', name:'More', desc:'Custom solutions for you' },
+  { icon:'☁️', name:'Cloud Teams', desc:'Cloud governance and optimization' },
+  { icon:'🧰', name:'DevOps Teams', desc:'CI/CD and deployment automation' },
+  { icon:'🚀', name:'Startups', desc:'Fast launch with enterprise foundations' },
 ];
 
 export function SolutionsSection() {
@@ -20,7 +22,7 @@ export function SolutionsSection() {
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">Enterprise AI solutions tailored for your industry&apos;s unique challenges and compliance requirements.</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {industries.map(ind => (
             <div key={ind.name} className="card rounded-2xl p-5 text-center group hover:border-cyan-400/30 transition-smooth cursor-pointer">
               <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">{ind.icon}</div>

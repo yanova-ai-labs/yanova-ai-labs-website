@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { COMPANY } from '@/constants';
 
 export function HeroSection() {
   return (
@@ -15,23 +16,23 @@ export function HeroSection() {
           <div className="space-y-7">
             <div className="animate-fade-up badge">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse inline-block" />
-              Enterprise AI Platform · Now Live
+              {COMPANY.name} · Futuristic Enterprise AI
             </div>
 
             <div className="animate-fade-up delay-100">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05]">
-                Intelligence for
+                {COMPANY.tagline.split(' ')[0]} for
                 <br />
                 <span className="gradient-text">Every Business</span>
               </h1>
             </div>
 
             <p className="animate-fade-up delay-200 text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed">
-              AI-powered platform to automate operations, gain real-time insights and accelerate growth.
+              AI-powered automation, observability, analytics, and one-click infrastructure solutions for modern enterprises.
             </p>
 
             <p className="animate-fade-up delay-300 text-sm font-bold tracking-[0.25em] text-cyan-400 uppercase">
-              Observe. Analyze. Automate.
+              {COMPANY.slogan}
             </p>
 
             <div className="animate-fade-up delay-400 flex flex-wrap gap-4">
@@ -42,7 +43,7 @@ export function HeroSection() {
                 </svg>
               </Link>
               <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-base btn-outline">
-                Contact Us
+                Request Demo
               </Link>
             </div>
           </div>
@@ -63,6 +64,7 @@ export function HeroSection() {
                   {c:'text-slate-400', t:'  ✓ EKS Cluster created              [v1.30]'},
                   {c:'text-slate-400', t:'  ✓ Node Groups (3 nodes)            [running]'},
                   {c:'text-slate-400', t:'  ✓ Monitoring + Logging             [active]'},
+                  {c:'text-slate-400', t:'  ✓ Security Checks passed           [98/100]'},
                   {c:'text-green-400', t:'  ✓ Deployment complete!              [42s]'},
                   {c:'text-cyan-300',  t:'  → https://eks-prod.yanovalabs.com'},
                 ].map((l,i) => <p key={i} className={`text-xs font-mono ${l.c} leading-relaxed`}>{l.t}</p>)}
@@ -80,7 +82,7 @@ export function HeroSection() {
         <div className="mt-20 animate-fade-up delay-600">
           <p className="text-center text-xs text-slate-700 uppercase tracking-widest mb-6">Powered by modern cloud stack</p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
-            {['AWS','Kubernetes','Terraform','Prometheus','Grafana','PostgreSQL','Docker'].map(t => (
+            {['AWS','Kubernetes','Terraform','Prometheus','Grafana','PostgreSQL','Docker','OpenAI'].map(t => (
               <span key={t} className="text-sm font-semibold text-slate-600 tracking-wider">{t}</span>
             ))}
           </div>

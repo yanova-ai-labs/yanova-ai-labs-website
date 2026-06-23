@@ -2,17 +2,20 @@ import { Product, Solution, ContactData } from '@/types';
 
 export const COMPANY = {
   name: 'Yanova AI Labs',
+  legalName: 'Yanova Labs Pvt. Ltd.',
   domain: 'yanovalabs.com',
   tagline: 'Intelligence for Every Business',
   slogan: 'Observe. Analyze. Automate.',
   founder: 'Venkat Yanapothula',
+  founderBackground:
+    '12+ years in IT, Linux, VMware, AWS, Terraform, DevOps, automation, cloud infrastructure, platform engineering, and release engineering.',
 };
 
 export const PRODUCTS: Product[] = [
   {
     id: 'oneclick',
     name: 'Yanova OneClick',
-    description: 'One-click infrastructure automation platform',
+    description: 'One-click infrastructure and Kubernetes deployment automation.',
     features: [
       'Kubernetes Deployment',
       'AWS Infrastructure Provisioning',
@@ -25,7 +28,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aiops',
     name: 'Yanova AI Ops',
-    description: 'AI-powered operations assistant',
+    description: 'AI-powered operations assistant for incidents, alerts, insights, and remediation.',
     features: [
       'Natural language queries',
       'Root cause analysis',
@@ -35,33 +38,33 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: 'insights',
-    name: 'Yanova Insights',
-    description: 'Business and product analytics',
+    id: 'observability',
+    name: 'Yanova Observability',
+    description: 'Unified logs, metrics, traces, alerts, and real-time system visibility.',
     features: [
-      'Real-time dashboards',
-      'User metrics',
-      'Product metrics',
-      'Executive dashboards',
-      'Revenue analytics',
+      'Unified logs',
+      'Metrics and traces',
+      'Intelligent alerting',
+      'System topology',
+      'Root-cause hints',
     ],
   },
   {
-    id: 'observability',
-    name: 'Yanova Observability',
-    description: 'Unified observability platform',
+    id: 'insights',
+    name: 'Yanova Insights',
+    description: 'Real-time user, product, business, and executive dashboards.',
     features: [
-      'Logs',
-      'Metrics',
-      'Traces',
-      'Alerts',
-      'AI-driven anomaly detection',
+      'Real-time dashboards',
+      'User and product metrics',
+      'Revenue analytics',
+      'Executive scorecards',
+      'AI trend detection',
     ],
   },
   {
     id: 'compliance',
     name: 'Yanova Compliance',
-    description: 'Security and governance platform',
+    description: 'Security, governance, compliance reports, and cloud risk checks.',
     features: [
       'CIS Benchmarks',
       'Security Audits',
@@ -72,7 +75,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'marketiq',
     name: 'Yanova MarketIQ',
-    description: 'Stock dashboards and market analytics',
+    description: 'AI-powered stock market intelligence, portfolio tracking, alerts, and analytics.',
     features: [
       'Stock dashboards',
       'Portfolio tracking',
@@ -134,6 +137,7 @@ export const NAVIGATION_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/products' },
   { label: 'Solutions', href: '/solutions' },
+  { label: 'Resources', href: '/resources' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];

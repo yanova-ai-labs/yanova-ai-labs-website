@@ -1,14 +1,16 @@
 const compliance = [
-  { title:'SOC 2', sub:'Type II', color:'#00d4ff' },
-  { title:'ISO', sub:'27001', color:'#a78bfa' },
-  { title:'GDPR', sub:'Compliant', color:'#34d399' },
+  { title:'SOC 2', sub:'Ready', color:'#00d4ff' },
+  { title:'ISO 27001', sub:'Ready', color:'#a78bfa' },
+  { title:'GDPR', sub:'Aware', color:'#34d399' },
   { title:'HIPAA', sub:'Ready', color:'#f59e0b' },
+  { title:'RBAC', sub:'Role-Based Access', color:'#60a5fa' },
+  { title:'Audit Logs', sub:'Always On', color:'#f472b6' },
 ];
 
 const benefits = [
   { value:'80%', label:'Faster Deployments' },
   { value:'60%', label:'Reduced Downtime' },
-  { value:'40%', label:'Lower Costs' },
+  { value:'40%', label:'Lower Cloud Waste' },
   { value:'100%', label:'Visibility & Control' },
 ];
 

@@ -4,11 +4,13 @@ import { PRODUCTS } from '@/constants';
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/5 overflow-hidden" style={{background:'#04080f'}}>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 rounded-full blur-3xl opacity-10 pointer-events-none" style={{background:'radial-gradient(ellipse, #00d4ff, transparent)'}} />
+    <footer className="relative border-t border-white/10 overflow-hidden" style={{ background: '#03060f' }}>
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 rounded-full blur-3xl opacity-20 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, #00d4ff, transparent)' }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16">
-          {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
@@ -19,7 +21,9 @@ export function Footer() {
                 <span className="text-cyan-400 font-bold"> AI LABS</span>
               </div>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-4">Intelligence for Every Business. Enterprise AI platform for infrastructure automation, operations, and analytics.</p>
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-4">
+              {COMPANY.tagline}. AI-powered automation, observability, analytics, and one-click infrastructure for modern enterprises.
+            </p>
             <p className="text-cyan-500/60 text-xs font-semibold tracking-widest uppercase">{COMPANY.slogan}</p>
             <div className="flex items-center gap-3 mt-5">
               {[[CONTACT.social.linkedin,'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'],
@@ -34,7 +38,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Products */}
           <div>
             <p className="text-white text-xs font-bold uppercase tracking-widest mb-5">Products</p>
             <ul className="space-y-3">
@@ -44,17 +47,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <p className="text-white text-xs font-bold uppercase tracking-widest mb-5">Company</p>
             <ul className="space-y-3">
-              {[['About','/about'],['Solutions','/solutions'],['Contact','/contact'],['Blog','#'],['Resources','#']].map(([l,h]) => (
+              {[['About','/about'],['Solutions','/solutions'],['Contact','/contact'],['Resources','/resources'],['Blog Placeholder','/resources']].map(([l,h]) => (
                 <li key={l as string}><Link href={h as string} className="text-slate-500 hover:text-cyan-400 transition-colors text-sm">{l}</Link></li>
               ))}
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <p className="text-white text-xs font-bold uppercase tracking-widest mb-5">Legal</p>
             <ul className="space-y-3">
@@ -70,8 +71,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 text-sm">© {new Date().getFullYear()} Yanova Labs Pvt. Ltd. All rights reserved.</p>
-          <p className="text-slate-600 text-xs">Intelligence for Every Business · yanovalabs.com</p>
+          <p className="text-slate-500 text-sm">© 2026 {COMPANY.legalName} All rights reserved.</p>
+          <p className="text-slate-600 text-xs">{COMPANY.tagline} · {COMPANY.slogan} · {COMPANY.domain}</p>
         </div>
       </div>
     </footer>

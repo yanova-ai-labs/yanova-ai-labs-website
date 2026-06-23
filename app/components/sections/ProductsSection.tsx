@@ -26,10 +26,14 @@ export function ProductsSection() {
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">Complete AI-powered tools for infrastructure, operations, analytics, and compliance.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {PRODUCTS.map((product, i) => (
-            <div key={product.id} className="card rounded-2xl p-7 flex flex-col group relative overflow-hidden">
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colors[i]} border flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300`}>
+        <div className="mb-12 overflow-x-auto pb-4 [scrollbar-color:#1f385c_#060b14]">
+          <div className="flex gap-6 min-w-max snap-x snap-mandatory px-1">
+            {PRODUCTS.map((product, i) => (
+              <div
+                key={product.id}
+                className="card rounded-2xl p-7 flex flex-col group relative overflow-hidden snap-start w-[320px] md:w-[360px]"
+              >
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colors[i]} border flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300`}>
                 {icons[i]}
               </div>
               <div className="absolute top-5 right-5 text-xs font-bold text-slate-600">0{i+1}</div>
@@ -49,8 +53,9 @@ export function ProductsSection() {
                 </svg>
               </Link>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full blur-3xl group-hover:opacity-60 opacity-20 transition-opacity duration-500" style={{background:'rgba(0,212,255,0.15)'}} />
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center">

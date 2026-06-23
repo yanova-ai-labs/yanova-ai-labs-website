@@ -8,10 +8,10 @@ const steps = [
 ];
 
 const checks = [
-  'VPC, Subnets, IAM Roles',
-  'EKS Cluster, Node Groups',
+  'AWS EKS, VPC, Subnets',
+  'IAM Roles, Node Groups',
   'Monitoring, Logging, Ingress',
-  'Secure, Scalable, Reliable',
+  'Cost Dashboard, Security Checks',
 ];
 
 export function OneClickSection() {
@@ -28,7 +28,7 @@ export function OneClickSection() {
             One-Click <span className="gradient-text">Kubernetes Cluster</span> Deployment
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Deploy production-ready EKS clusters in minutes. No manual configuration, no complexity.
+            Deploy production-ready Kubernetes clusters in minutes, not days.
           </p>
         </div>
 

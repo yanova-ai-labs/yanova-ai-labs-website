@@ -18,9 +18,9 @@ export function Card({
   return (
     <div
       className={`
-        bg-white rounded-2xl border border-gray-200 p-6 md:p-8
-        ${gradient ? 'bg-gradient-to-br from-white to-blue-50' : ''}
-        ${hover && interactive ? 'hover-lift hover:border-blue-200 hover:shadow-glow-blue' : ''}
+        rounded-2xl border border-white/10 p-6 md:p-8
+        ${gradient ? 'bg-gradient-to-br from-[#10192c] to-[#111128]' : 'bg-[#0e1729]/80'}
+        ${hover && interactive ? 'hover:translate-y-[-4px] hover:border-cyan-300/30 hover:shadow-[0_14px_36px_rgba(0,0,0,0.35)]' : ''}
         ${interactive ? 'transition-smooth' : ''}
         ${className}
       `}

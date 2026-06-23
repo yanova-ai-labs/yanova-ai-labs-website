@@ -1,3 +1,5 @@
+import { COMPANY } from '@/constants';
+
 export function AboutSection() {
   const stats = [
     { value:'12+', label:'Years Experience', sub:'DevOps & Cloud' },
@@ -17,10 +19,10 @@ export function AboutSection() {
               About <span className="gradient-text">Yanova AI Labs</span>
             </h2>
             <p className="text-slate-400 text-lg leading-relaxed mb-6">
-              Yanova AI Labs is an AI-powered enterprise platform company focused on automating infrastructure, operations, analytics and compliance. Founded by <span className="text-white font-semibold">Venkat Yanapothula</span>, a 12+ year veteran in DevOps, Cloud, and Automation.
+              Yanova AI Labs is an AI-powered enterprise product company focused on automation, observability, cloud operations, analytics, and intelligent decision-making. Founded by <span className="text-white font-semibold">{COMPANY.founder}</span>.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              We believe every enterprise deserves intelligent automation — from one-click Kubernetes deployments to AI-driven operations and market intelligence.
+              {COMPANY.founderBackground}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-5">

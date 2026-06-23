@@ -12,6 +12,7 @@ const techs = [
   { name:'Docker', color:'#2496ED' },
   { name:'Prometheus', color:'#E6522C' },
   { name:'Grafana', color:'#F46800' },
+  { name:'OpenAI', color:'#74E2A7' },
 ];
 
 export function TechStackSection() {

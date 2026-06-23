@@ -19,7 +19,7 @@ export function CTASection() {
               <span className="gradient-text">Your Business?</span>
             </h2>
             <p className="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-              Let&apos;s build the future together. Join enterprises using Yanova AI Labs to automate operations, eliminate manual work, and gain real-time intelligence.
+              Build, observe, analyze, and automate with Yanova AI Labs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl btn-primary shadow-[0_0_50px_rgba(0,212,255,0.3)] text-base">
