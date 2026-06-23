@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'oneclick',
     name: 'Yanova OneClick',
-    description: 'One-click infrastructure and Kubernetes deployment automation.',
+    description: 'Deploy production-ready cloud and Kubernetes environments in minutes.',
     features: [
       'Kubernetes Deployment',
       'AWS Infrastructure Provisioning',
@@ -34,7 +34,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aiops',
     name: 'Yanova AI Ops',
-    description: 'AI-powered operations assistant for incidents, alerts, insights, and remediation.',
+    description: 'Detect issues, identify root causes, and automate remediation using AI.',
     features: [
       'Natural language queries',
       'Root cause analysis',
@@ -46,7 +46,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'observability',
     name: 'Yanova Observability',
-    description: 'Unified logs, metrics, traces, alerts, and real-time system visibility.',
+    description: 'Monitor logs, metrics, traces, and alerts from a single platform.',
     features: [
       'Unified logs',
       'Metrics and traces',
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'insights',
     name: 'Yanova Insights',
-    description: 'Real-time user, product, business, and executive dashboards.',
+    description: 'Track users, products, revenue, and operational performance through intelligent dashboards.',
     features: [
       'Real-time dashboards',
       'User and product metrics',
@@ -81,7 +81,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'marketiq',
     name: 'Yanova MarketIQ',
-    description: 'AI-powered stock market intelligence, portfolio tracking, alerts, and analytics.',
+    description: 'AI-powered stock insights, portfolio monitoring, and market intelligence.',
     features: [
       'Stock dashboards',
       'Portfolio tracking',
