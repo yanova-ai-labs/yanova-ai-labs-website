@@ -7,8 +7,9 @@ export function CTASection() {
         <div className="card p-8 md:p-12 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-5">Transform Your Operations With AI Intelligence</h2>
           <p className="text-slate-300 text-lg max-w-3xl mx-auto mb-8">
-            With 12+ years of experience in automation, DevOps, and cloud platforms, Yanova AI Labs helps businesses
-            automate operations and gain real-time intelligence.
+            At Yanova AI Labs, we believe the future belongs to organizations that can observe intelligently,
+            analyze instantly, and automate confidently. Our mission is to build the platforms that make
+            that future possible.
           </p>
           <Link href="/contact-us" className="btn-primary px-8 py-3 rounded-xl text-sm">
             Talk to Us

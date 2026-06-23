@@ -13,11 +13,15 @@ export function AboutSection() {
       <div className="section-content">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
-            <div className="badge mb-5">Awarded Vision for AI-Powered Automation</div>
+            <div className="badge mb-5">Building the Future of Intelligent Operations</div>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-5">Corporate Profile</h2>
             <p className="text-slate-300 text-lg leading-relaxed">
-              Led by founder {COMPANY.founder}, Yanova AI Labs builds practical AI products for automation,
-              observability, analytics, and business intelligence.
+              Under the leadership of {COMPANY.founder}, Yanova AI Labs is building the next generation
+              of intelligent automation and observability platforms for modern enterprises.
+            </p>
+            <p className="text-slate-400 mt-4 leading-relaxed">
+              We help organizations simplify operations, accelerate innovation, and gain real-time
+              intelligence through AI-powered automation and observability.
             </p>
           </div>
 
